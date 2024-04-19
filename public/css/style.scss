@@ -1,0 +1,3100 @@
+// color
+$primary: #FE0000;
+$secondary: #FFEAEA;
+$text: #252525;
+$background: #fff;
+$acceent: #f5f5f5;
+
+
+
+header{
+    position: relative;
+    .container{
+        position: relative;
+        z-index: 50;
+        .navbar{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 15px;
+            background: #FBFBFB;
+            filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.15));
+            padding: 11px 21px;
+            margin: 31px auto;
+            width: 96%;
+    
+            .navbar-brand{
+                img{
+                    width: 190px;
+                    height: 48px;
+                    flex-shrink: 0;
+                }
+            }
+            .navbar-nav{
+                .nav-item{
+                    margin-right: 15px;
+                    a{
+                        text-decoration: none;
+                    }
+                    .nav-link{
+                        color: #4d4d4d;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 91.5%; /* 14.64px */
+                        text-transform: capitalize;
+                        width: 100%;
+                    }
+                    :hover{
+                        color: #FE0000;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 91.5%; /* 14.64px */
+                        text-transform: capitalize;
+                        transition: opacity .5s ease-in-out;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            background-color: $primary;
+                            bottom: -10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .active{
+                        color: #FE0000;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 91.5%; /* 14.64px */
+                        text-transform: capitalize;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            background-color: $primary;
+                            bottom: -10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .btn{
+                border: 2px solid $primary;
+                border-radius: 10px;
+                color: #FE0000;
+                padding: 11px 16px;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 91.5%; /* 14.64px */
+                text-transform: capitalize;
+                &:hover{
+                    background-color: $primary;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    
+}
+body{
+    ::selection{
+        background-color: $primary !important;
+        color: #fff !important;
+    }
+}
+// hero
+main{
+    margin: 0 auto;
+    .hero{
+        // background-image: url(../assets/img/hero/hero.png);
+        // background-color: $primary;
+        background-size: 100% auto;
+        height: 100vh;
+        width: auto;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        // overflow: hidden;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #fff 69.27%);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 384px;
+            z-index: 6;
+        }
+        // &::before{
+        //     content: "";
+        //     position: absolute;
+        //     background: rgba($color: #000000, $alpha: .3);
+        //     bottom: -10px;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: .3);
+            z-index: 6;
+        }
+        .carousel{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            .carousel-inner{
+                height: 100%;
+                .carousel-item{
+                    height: 100%;
+                    img{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 30;
+            .header{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                .row{
+                    width: 100%;
+                    .col-10{
+                        display: flex;
+                        justify-content: start;
+                        align-items: end;
+                        h1{
+                            position: relative;
+                            z-index: 20;
+                            margin: 0 20px 110px 20px;
+                        } 
+                    }
+                }
+            }
+            .row{
+                // height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 10;
+                .set_tiket{
+                    position: relative;
+                    // background-color: #FE0000;
+                    .card{
+                        position: absolute;
+                        bottom: -50%;
+                        left: 0;
+                        z-index: 20;
+                        transform: translateY(60%);
+                        background-image: url(../assets/img/pattern/pat.jpg) !important;
+                        background-size: 100% auto;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: fit-content;
+                        border-radius: 20px;
+                        border: none;
+                        overflow: visible;
+                        @media screen and (max-width: 992px) {
+                            background-size: cover;
+                        }
+                        &::before{
+                            content: "";
+                            mix-blend-mode: multiply;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba($color: $primary, $alpha: 1);
+                            z-index: 21;
+                            border-radius: 20px;
+                        }
+                        .card-header{
+                            background-color: transparent;
+                            border: none;
+                            position: relative;
+                            z-index: 21;
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            padding: 16px 24px;
+
+                            h5{
+                                color: #FAFAFA;
+                                font-family: Poppins;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 600;
+                                // line-height: 91.5%; /* 21.96px */
+                                margin: 0;
+                                text-transform: capitalize;
+                            }
+                            .material-symbols-outlined {
+                                font-size: 28px;
+                                color: #FAFAFA;
+                                margin-left: 14px;
+                                font-variation-settings:
+                                'FILL' 0,
+                                'wght' 400,
+                                'GRAD' 0,
+                                'opsz' 24
+                            }
+                        }
+                        .card-body{
+                            position: relative;
+                            z-index: 21;
+                            border-radius: 15px;
+                            background: #FBFBFB;
+                            margin: 0 6px 6px 6px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            .form{
+                                width: 100%;
+                                display: block;
+                                .form-group{
+                                    label{
+                                        color: #303030;
+                                        font-family: Poppins;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 91.5%; /* 14.64px */
+                                        text-transform: capitalize;
+                                        margin-bottom: 6px;
+                                    }
+                                    .input-group-text{
+                                        background-color: #fff;
+                                        border: none;
+                                    }
+                                    .button-group{
+                                        background-color: #fff;
+                                        border: 1px solid #a6a6a6;
+                                        border-radius: 8px;
+                                    }
+                                    .dropdown-menu{
+                                        margin: 10px 0;
+                                        box-shadow: none;
+                                        .inner{
+                                            .dropdown-item{
+                                                .active, .selected{
+                                                    background-color: $primary;
+                                                }
+                                            }
+                                            .active, .selected{
+                                                background-color: $primary;
+                                            }
+                                        }
+                                    }
+                                    .dropdown-toggle{
+                                        border: 2px solid transparent;
+                                    }
+                                    .btn{
+                                        background-color: #fff;
+                                        border-radius: 0 8px 8px 0;
+                                        margin: 0;
+                                        &:focus{
+                                            border: 2px solid transparent;
+                                        }
+                                    }
+                                }
+                                .input-group{
+                                    margin: 0;
+                                    padding: 0;
+                                    width: 100%;
+                                    span{
+                                        background-color: transparent;
+                                        position: relative;
+                                        &::after{
+                                            content: "";
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 0;
+                                            transform: translateY(-50%);
+                                            background-color: #a6a6a6;
+                                            width: 2px;
+                                            height: 20px;
+                                            border-radius: 10px;
+                                        }
+                                        &:focus{
+                                            box-shadow: none;
+                                            border: .5px solid $primary;
+                                            border-left: none;
+                                        }
+                                    }
+                                    input{
+                                        border-left: none;
+                                        border-top: 1px solid #d2d2d2;
+                                        border-color: none !important;
+                                        &:focus{
+                                            box-shadow: none;
+                                            border: .5px solid $primary;
+                                            border-left: none;
+                                        }
+                                    }
+                                    
+                                }
+                                
+                                .btncari{
+                                    // display: flex;
+                                    // justify-content: center;
+                                    // align-items: center;
+                                    .btn{
+                                        background-color: $primary;
+                                        width: 100%;
+                                        color: #FFF;
+                                        text-align: center;
+                                        font-family: Poppins;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 91.5%; /* 14.64px */
+                                        text-transform: capitalize;
+                                        border-radius: 10px;
+                                        border: 2px solid $primary;
+                                        // transition: .5s ease-in-out;
+                                        span{
+                                            padding: 0;
+                                            margin: 0;
+                                        }
+                                        h6{
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+                                        &:hover{
+                                            background-color: #FFF;
+                                            border: 2px solid $primary;
+                                            cursor: pointer;
+                                            color: $primary;
+                                            // transition: background-color .5s ease-in-out;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // end sec1
+    .sec2{
+        margin-top: 82.5px;
+        @media screen and (max-width: 992px) {
+            margin-top: 264px;
+        }
+        .brand-group{
+            padding: 42px 0;
+            display: flex;
+            justify-content: space-around;
+            img{
+                object-fit: contain;
+                // width: 56px;
+                height: 56px;
+            }
+        }
+        .card{
+            border-radius: 18px;
+            background: #FFEAEA;
+            border: none;
+            .card-body{
+                margin: 0;
+                padding: 22px;
+                // flex-wrap: wrap;
+                // row-gap: 22px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .card{
+                    margin: 0;
+                    padding: 0;
+                    border-radius: 12px;
+                    background: #FFF;
+                    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+                    // width: 159px !important;
+                    height: 127px;
+                    flex-shrink: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .card-body{
+                        padding: 12px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .icon-group{
+                            display: block;
+                            .icon{
+                                height: 57px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                span{
+                                    font-size: 39px;
+                                    text-align: center;
+                                    color: $primary;
+                                }
+                            }
+                            .icon-t{
+                                text-align: center;
+                                height: 34px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p{
+                                    margin: 0;
+                                    color: #303030;
+                                    text-align: center;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 110%; /* 14.64px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // end sec2
+    .agen{
+        margin-top: 82.44px;
+        .header{
+            width: 100%;
+            h3{
+                text-align: center;
+                font-family: Poppins;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 91.5%; /* 36.6px */
+                text-transform: capitalize;
+                .agen{
+                    color: #FE0000;
+                }
+                .kami{
+                    color: #252525;
+                }
+            }
+        }
+        .btngroup{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-top: -27px;
+            .btn{
+                background-color: $secondary;
+                margin: 0 8.5px;
+                padding: 5px 20px;
+                color: $primary;
+                i{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .scroll-content{
+            width: 100%;
+            overflow-x: scroll;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .agengroup{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: fit-content;
+                transition: transform 0.3s ease;
+                
+                .card_a{
+                    width: 266px;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    border: none;
+                    margin: 0 12px;
+                    &:hover{
+                        .images{
+                            img{
+                                transform: scale(1.1);
+                                transition: .5s ease-in-out;
+                            }
+                        }
+                    }
+                    .card-body{
+                        margin: 0;
+                        padding: 0;
+                        .images{
+                            border-radius: 15px;
+                            overflow: hidden;
+                            img{
+                                transition: .5s ease-in-out;
+                                border-radius: 15px;
+                                width: 266px;
+                                height: 300px;
+                                object-fit: contain;
+                                object-position: center;
+                            }
+                        }
+                        .card-text{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 20px;
+                            .kota{
+                                margin-bottom: 19px;
+                                span{
+                                    color: #252525;
+                                    text-align: center;
+                                    font-family: Poppins;
+                                    font-size: 24px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 21.96px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .total{
+                                span{
+                                    color: #FE0000;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .btn{
+                                border-radius: 50%;
+                                border: none;
+                                width: 42px;
+                                height: 42px;
+                                display: flex;
+                                align-items: center;
+                                scale: 1;
+                                justify-content: center;
+                                transition: .5s ease-in-out;
+                                i{
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    color: $primary;
+                                }
+                                &:hover{
+                                    background-color: #cdcdcd;
+                                    scale: 1.2;
+                                    transition: scale .5s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // tentang
+    .tentang{
+        background-image: url('../assets/img/pattern/pat.jpg');
+        height: 100%;
+        width: auto;
+        background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        padding: 65px 0;;
+        &::before{
+            content: "";
+            mix-blend-mode: multiply;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $primary, $alpha: 1);
+            z-index: 21;
+        }
+        .container{
+            position: relative;
+            z-index: 22;
+            .header{
+                h3{
+                    color: #FFF;
+                    text-align: start;
+                    font-family: Poppins;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 91.5%; /* 36.6px */
+                    text-transform: capitalize;
+                }
+            }
+            .sometext{
+                margin: 26px auto;
+                p{
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 153%; /* 24.48px */
+                    text-transform: capitalize;
+                }
+            }
+            .archievement{
+                .arcgroup{
+                    // display: flex;
+                    .arc1, .arc2{
+                        span{
+                            color: #FFF;
+                            text-align: center;
+                            font-family: Poppins;
+                            font-size: 36px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 91.5%; /* 32.94px */
+                            text-transform: capitalize;
+                            text-align: start;
+                        }
+                        .desc{
+                            span{
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+                .arcgroup2{
+                    margin-top: 50px;
+                    .arc3, .arc4{
+                        span{
+                            color: #FFF;
+                            text-align: center;
+                            font-family: Poppins;
+                            font-size: 36px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 91.5%; /* 32.94px */
+                            text-transform: capitalize;
+                            text-align: start;
+                        }
+                        .desc{
+                            span{
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+            .images{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                video{
+                    border-radius: 30px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    // end tentang
+    // artikel
+    .artikel{
+        margin-top: 80px;
+        .header{
+            h3{
+                color: #252525;
+                font-family: Poppins;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 91.5%; /* 36.6px */
+                text-transform: capitalize;
+                .terkini{
+                    color: #FE0000;
+                    font-family: Poppins;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 91.5%;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .btngroup{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-top: -27px;
+            .btn{
+                background-color: $secondary;
+                margin: 0 8.5px;
+                padding: 5px 20px;
+                color: $primary;
+                i{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .scroll-content{
+            width: 100%;
+            overflow-x: scroll;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .bloggroup{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: fit-content;
+                transition: transform .5s ease-in-out ;
+                .card_b{
+                    width: 555px;
+                    padding: 0;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    border: none;
+                    margin: 0 12px;
+                    &:hover{
+                        .images{
+                            img{
+                                transform: scale(1.1);
+                                transition: .5s ease-in-out;
+                            }
+                        }
+                    }
+                    .card-body{
+                        margin: 0;
+                        padding: 0;
+                        .images{
+                            border-radius: 15px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 300px;
+                                border-radius: 15px;
+                                object-fit: cover;
+                                object-position: center;
+                                transition: .5s ease-in-out;
+                            }
+                        }
+                        .card-text{
+                            padding: 20px 0;
+                            .penulis{
+                                span{
+                                    color: #7C7C7C;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 120%; /* 19.2px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .judul{
+                                padding: 11px 0;
+                                span{
+                                    color: #212121;
+                                    font-family: Poppins;
+                                    font-size: 24px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 120%; /* 28.8px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .sometext{
+                                height: 57px;
+                                p{
+                                    color: #7C7C7C;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 120%; /* 19.2px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            
+                            .btn{
+                                margin: 30px 0 10px 0;
+                                padding: 10px 10px 10px 0;
+                                border: none;
+                                height: fit-content;
+                                display: flex;
+                                align-items: end;
+                                justify-content: center;
+                                transition: .5s ease-in-out;
+                                // text
+                                color: #FE0000;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                                i{
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    color: $primary;
+                                    margin-left: 10px;
+                                }
+                                &:hover{
+                                    transform: scale(1.2);
+                                    transform-origin: left;
+                                    transition: .5s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .testimonial{
+        margin-bottom: 100px;
+        .testibody{
+            border-radius: 30px;
+            background: #F5F5F5;
+            padding: 47px 0;
+            .header{
+                h3{
+                    color: #252525;
+                    font-family: Poppins;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 91.5%; /* 36.6px */
+                    text-transform: capitalize;
+                    .terkini{
+                        color: #FE0000;
+                        font-family: Poppins;
+                        font-size: 40px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 91.5%;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .btngroup{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                margin-top: -27px;
+                .btn{
+                    background-color: $secondary;
+                    margin: 0 8.5px;
+                    padding: 5px 20px;
+                    color: $primary;
+                    i{
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .scroll-content{
+                width: 100%;
+                overflow-x: scroll;
+                padding: 20px 0;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                .testigroup{
+                    margin: 39px 0 0 0;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: fit-content;
+                    transition: transform 0.3s ease-in-out;
+                    .card_t{
+                        background: #FFF;
+                        border: none;
+                        width: 362px;
+                        border-radius: 15px;
+                        overflow: visible;
+                        position: relative;
+                        padding: 12px 29px;
+                        margin-right: 24px;
+                        .petik{
+                            position: absolute;
+                            top: -5px;
+                            right: 30%;
+                            color: #FE0000;
+                            font-family: Poppins;
+                            font-size: 128px;
+                            font-style: italic;
+                            font-weight: 600;
+                            line-height: 91.5%; /* 117.12px */
+                            text-transform: capitalize;
+                            z-index: 99;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        .card-body{
+                            padding: 0;
+                            margin: 12px 0;
+                            .info{
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                .images{
+                                    width: 72px;
+                                    height: 72px;
+                                    border-radius: 50%;
+                                    background-color: #4d4d4d;
+                                    overflow: hidden;
+                                    img{
+                                        object-fit: cover;
+                                        object-position: center;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                .customer{
+                                    margin-left: 20px;
+                                    span{
+                                        color: #000;
+                                        font-family: Poppins;
+                                        font-size: 20px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 91.5%; /* 18.3px */
+                                        text-transform: capitalize;
+                                    }
+                                    .tanggal{
+                                        span{
+                                            color: #7C7C7C;
+                                            font-family: Poppins;
+                                            font-size: 16px;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            line-height: 91.5%; /* 14.64px */
+                                            text-transform: capitalize;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cta{
+    // margin-top: 100px;
+    background-image: url('../assets/img/pattern/pat.jpg');
+    height: fit-content;
+    width: 100%;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    padding: 65px 0;;
+    &::before{
+        content: "";
+        mix-blend-mode: multiply;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $primary, $alpha: 1);
+        z-index: 21;
+    }
+    .left{
+        position: relative;
+        z-index: 30;
+        h3{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 91.5%; /* 32.94px */
+            text-transform: capitalize;
+        }
+        p{
+            margin-top: 30px;
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 138.5%; /* 22.16px */
+            text-transform: capitalize;
+        }
+    }
+    .right{
+        position: relative;
+        z-index: 30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn{
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 91.5%; /* 14.64px */
+            text-transform: uppercase;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 2px solid #FFF;
+            &:hover{
+                background-color: #FFF;
+                border: 2px solid #FFF;
+                color: $primary;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// landing
+.landing{
+    background-image: url(../assets/img/background/landing.jpg);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    .container{
+        height: 100%;
+        padding: 94px 0;
+        .header{
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            h1{
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 115.5%; /* 46.2px */
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+.tiket{
+    background-color: #F5F5F5;
+    .container{
+        height: fit-content;
+        padding: 0 0 87px 0;
+    }
+    .card{
+        height: fit-content;
+        padding: 62px 20px;
+        border-radius: 50px;
+        background: #FFF;
+        box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.07);
+        border: none;
+        margin-top: -57px;
+        .card-body{
+            .header{
+                .btn{
+                    background-color: $secondary;
+                    margin: 0 8.5px;
+                    padding: 5px 20px;
+                    color: $primary;
+                    i{
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+                .rute{
+                    .berangkat, .tujuan{
+                        span{
+                            color: #302F2F;
+                            font-family: Poppins;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 91.5%; /* 29.28px */
+                            text-transform: capitalize;
+                            @media screen and (max-width: 992px) {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .rute-anim{
+                        height: 52px;
+                        padding: 0;
+                        margin: 0 34px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        position: relative;
+                        overflow: hidden;
+                        .bis{
+                            position: absolute;
+                            top: 0;
+                            left: -35px;
+                            animation: bis 5s linear infinite;
+                            img{
+                                width: 35px;
+                                height: 35px;
+                                animation: goyang 5s linear infinite;
+                            }
+                        }
+                        @keyframes goyang {
+                            0%{
+                                transform: rotate(5deg);
+                            }
+                            10%{
+                                transform: rotate(0);
+                            }
+                            20%{
+                                transform: rotate(5deg);
+                            }
+                            30%{
+                                transform: rotate(0);
+                            }
+                            40%{
+                                transform: rotate(5deg);
+                            }
+                            50%{
+                                transform: rotate(0);
+                            }
+                            60%{
+                                transform: rotate(5deg);
+                            }
+                            70%{
+                                transform: rotate(0);
+                            }
+                            80%{
+                                transform: rotate(5deg);
+                            }
+                            90%{
+                                transform: rotate(0);
+                            }
+                            100%{
+                                transform: rotate(5deg);
+                            }
+                        }
+                        @keyframes bis {
+                            0%{
+                                transform: translateX(0);
+                            }
+                            100%{
+                                transform: translateX(248px);
+                            }
+                        }
+                    }
+                }
+                .ubah{
+                    border-radius: 10px;
+                    border: 2px solid #F00;
+                    background: #FFF;
+                    padding: 17px 20px;
+                    color: #FE0000;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 91.5%; /* 14.64px */
+                    text-transform: capitalize;
+                }
+            }
+            .tanggal{
+                text-align: center;
+                span{
+                    color: #302F2F;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 91.5%; /* 14.64px */
+                    text-transform: capitalize;
+                }
+            }
+            .collapse{
+                .card_t{
+                    border-radius: 15px;
+                    background: #FBFBFB;
+                    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
+                    .card-body{
+                        position: relative;
+                        z-index: 21;
+                        border-radius: 15px;
+                        background: #FBFBFB;
+                        margin: 0 6px 6px 6px;
+                        height: 100%;
+                        .form{
+                            width: 100%;
+                            .form-group{
+                                label{
+                                    color: #303030;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                    margin-bottom: 6px;
+                                }
+                                .input-group-text{
+                                    background-color: #fff;
+                                    border: none;
+                                }
+                                .button-group{
+                                    background-color: #fff;
+                                    border: 1px solid #a6a6a6;
+                                    border-radius: 8px;
+                                }
+                                .dropdown-menu{
+                                    margin: 10px 0;
+                                    box-shadow: none;
+                                    .inner{
+                                        .dropdown-item{
+                                            .active, .selected{
+                                                background-color: $primary;
+                                            }
+                                        }
+                                        .active, .selected{
+                                            background-color: $primary;
+                                        }
+                                    }
+                                }
+                                .dropdown-toggle{
+                                    border: 2px solid transparent;
+                                }
+                                .btn{
+                                    background-color: #fff;
+                                    border-radius: 0 8px 8px 0;
+                                    margin: 0;
+                                    &:focus{
+                                        border: 2px solid transparent;
+                                    }
+                                }
+                            }
+                            .input-group{
+                                margin: 0;
+                                padding: 0;
+                                width: 100%;
+                                span{
+                                    background-color: transparent;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translateY(-50%);
+                                        background-color: #a6a6a6;
+                                        width: 2px;
+                                        height: 20px;
+                                        border-radius: 10px;
+                                    }
+                                    &:focus{
+                                        box-shadow: none;
+                                        border: .5px solid $primary;
+                                        border-left: none;
+                                    }
+                                }
+                                input{
+                                    border-left: none;
+                                    border-top: 1px solid #d2d2d2;
+                                    border-color: none !important;
+                                    &:focus{
+                                        box-shadow: none;
+                                        border: .5px solid $primary;
+                                        border-left: none;
+                                    }
+                                }
+                                
+                            }
+                            
+                            .btncari{
+                                // display: flex;
+                                // justify-content: center;
+                                // align-items: center;
+                                .btn{
+                                    background-color: $primary;
+                                    width: 100%;
+                                    color: #FFF;
+                                    text-align: center;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                    border-radius: 10px;
+                                    border: 2px solid $primary;
+                                    // transition: .5s ease-in-out;
+                                    span{
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+                                    h6{
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                                    &:hover{
+                                        background-color: #FFF;
+                                        border: 2px solid $primary;
+                                        cursor: pointer;
+                                        color: $primary;
+                                        // transition: background-color .5s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .my-modal{
+                .modal-dialog{
+                    .modal-content{
+                        padding: 32px;
+                        border-radius: 50px;
+                        .modal-body{
+                            margin-bottom: 54px;
+                            .header{
+                                h3{
+                                    color: #000;
+                                    font-family: Poppins;
+                                    font-size: 36px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 32.94px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .header_rute{
+                                margin-top: 42px;
+                                .rute{
+                                    .berangkat, .tujuan, .tanggal_berangkat{
+                                        span{
+                                            color: #302F2F;
+                                            font-family: Poppins;
+                                            font-size: 20px;
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            line-height: 91.5%; /* 29.28px */
+                                            text-transform: capitalize;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            .tanggal{
+                                span{
+                                    color: #302F2F;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .seat{
+                                // margin:-240px auto -240px auto;
+                                border: 2px solid $primary;
+                                // height: 100%;
+                                width: 212px;
+                                border-radius: 10px;
+                                // transform: rotate(-90deg);
+                                overflow: hidden;
+                                .kabin{
+                                    width: 100%;
+                                    height: 63px;
+                                    border-bottom: 5px solid #848484;
+                                    .dashboard{
+                                        background-color: #686767;
+                                        height: 18px;
+                                        border-radius: 5px 5px 0 0;
+                                        position: relative;
+                                        i{
+                                            position: absolute;
+                                            top: 30%;
+                                            right: 0;
+                                            padding: 0 7px;
+                                            z-index: 50;
+                                            font-size: 35px;
+                                        }
+                                    }
+                                }
+                                .sg{
+                                    // margin-top: 10px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding: 2px;
+                                    position: relative;
+                                    .pintu{
+                                        position: absolute;
+                                        top: 30%;
+                                        left: -10%;
+                                        transform: translateX(-50%);
+                                        width: 50px;
+                                        background-color: $primary;
+                                        margin: 0;
+                                        padding: 0;
+                                        border-radius:5px 5px 0 0;
+                                        transform: rotate(90deg);
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        span{
+                                            margin: 0;
+                                            padding: 0;
+                                            font-size: 8px;
+                                            color: #FFF;
+                                        }
+                                    }
+                                    .cb-l{
+                                        background-color: #D9D9D9;
+                                        border-radius: 0 0 10px 10px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: start;
+                                    }
+                                    .cb-r{
+                                        background-color: #D9D9D9;
+                                        border-radius: 0 0 10px 10px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: end;
+                                    }
+                                    .cb-lk{
+                                        background-color: #D9D9D9;
+                                        border-radius: 0 0 10px 10px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: start;
+                                        margin-left: 10px;
+                                        .cb{
+                                            position: relative;
+                                            // margin: 0 2px;
+                                            box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.07);
+                                            .btn{
+                                                overflow: visible;
+                                                border-top: 0 solid #000;
+                                                border-right: 5px solid #000;
+                                                border-left: 5px solid #000;
+                                                border-bottom: 8px solid #000;
+                                                background-color: $primary;
+                                                border-radius: 5px;
+                                            }
+                                            label{
+                                                height: 30px;
+                                                width:40px;
+                                                padding: 0;
+                                                // transform: rotate(90deg) !important;
+                                                span{
+                                                    // transform: rotate(90deg) !important;
+                                                    color: #FFF;
+                                                    text-align: center;
+                                                    font-family: Poppins;
+                                                    font-size: 12px;
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    line-height: 91.5%; /* 12.81px */
+                                                    text-transform: capitalize;
+                                                }
+                                            }
+                                            .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+                                                background-color: #00A0E9 !important;
+                                            }
+                                        }
+                                    }
+                                    .cb-r, .cb-l{
+                                        .cb{
+                                            position: relative;
+                                            margin: 0 2px;
+                                            box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.07);
+                                            .btn{
+                                                overflow: visible;
+                                                border-top: 0 solid #000;
+                                                border-right: 5px solid #000;
+                                                border-left: 5px solid #000;
+                                                border-bottom: 8px solid #000;
+                                                background-color: $primary;
+                                                border-radius: 5px;
+                                            }
+                                            label{
+                                                height: 30px;
+                                                width:40px;
+                                                padding: 0;
+                                                // transform: rotate(90deg) !important;
+                                                span{
+                                                    // transform: rotate(90deg) !important;
+                                                    color: #FFF;
+                                                    text-align: center;
+                                                    font-family: Poppins;
+                                                    font-size: 12px;
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    line-height: 91.5%; /* 12.81px */
+                                                    text-transform: capitalize;
+                                                }
+                                            }
+                                            .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+                                                background-color: #00A0E9 !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .ket{
+                                span{
+                                    color: #E60000;
+                                    font-family: Poppins;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 91.5%; /* 10.98px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                            
+                            .result{
+                                color: #303030;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 91.5%; /* 10.98px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        .btngroup{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .btn{
+                                width: 169px !important;
+                                height: 45px !important;
+                                border: 2px solid $primary;
+                                margin: 0 13.5px;
+                                padding: 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 10px;
+                            }
+                            .batal{
+                                color: #E60000;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                            }
+                            .pesan{
+                                background-color: $primary;
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                    .kelas{
+                        .form-group{
+                            .button-group{
+                                background-color: #fff;
+                                border: 1px solid #a6a6a6;
+                                border-radius: 8px;
+                                height: 100%;
+                            }
+                            .dropdown-menu{
+                                // margin: 10px 0;
+                                box-shadow: none;
+                                .inner{
+                                    .dropdown-item{
+                                        .active, .selected{
+                                            background-color: $primary;
+                                        }
+                                    }
+                                    .active, .selected{
+                                        background-color: $primary;
+                                    }
+                                }
+                            }
+                            .dropdown-toggle{
+                                border: 2px solid transparent;
+                            }
+                            .btn{
+                                background-color: #fff;
+                                border-radius: 0 8px 8px 0;
+                                margin: 0;
+                                &:focus{
+                                    border: 2px solid transparent;
+                                }
+                            }
+                            .my-select{
+                                .filter-option{
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .daftar_agen{
+                margin-top: 69px;
+                .title{
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+            .agen_body{
+                width: 100%;
+                .images{
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #4d4d4d;
+                    overflow: hidden;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        object-fit: cover;
+                        object-position: center center;
+                    }
+                }
+                .btn{
+                    border-radius: 10px;
+                    background: #FFC300;
+                    padding: 15px 29px;
+                    color: #252525;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 91.5%; /* 14.64px */
+                    text-transform: capitalize;
+                }
+                .list-agen{
+                    &:hover{
+                        background-color: #F5F5F5 !important;
+                        cursor: pointer;
+                        border-radius: 20px;
+                    }
+                    .btn{
+                        border-radius: 10px;
+                        background: #FFC300;
+                        padding: 15px 29px;
+                        color: #252525;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 91.5%; /* 14.64px */
+                        text-transform: capitalize;
+                        @media screen and (max-width:768px){
+                            padding: 4px;
+                            font-size: 12px;
+                        }
+                    }
+                    .images{
+                        width: 35px;
+                        height: 35px;
+                        img{
+                            width: 35px;
+                            height: 35px;
+                            object-fit: cover;
+                            object-position: center center;
+                        }
+                    }
+                }
+
+                
+            }
+            @media screen and (max-width:768px){
+                #kelas, #whatsapp{
+                    display: none;
+                }
+            }
+            .t_agen{
+                margin-top: 69px;
+                .table{
+                    .table-responsive{
+                        .modal{
+                            .modal-dialog{
+                                .modal-content{
+                                    min-width: 943px;
+                                }
+                            }
+                        }
+                    }
+                    thead{
+                        tr{
+                            th{
+                                height: 84px;
+                                color: #252525;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                                padding: 5px 13px;
+                                vertical-align: middle;
+                                border-color: transparent;
+                                .btn{
+                                    border-radius: 5px;
+                                    background: #FFEAEA;
+                                    padding: 5px 13px;
+                                    span{
+                                        color: #252525;
+                                        font-family: Poppins;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 91.5%; /* 14.64px */
+                                        text-transform: capitalize;
+                                    }
+                                    i{
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            height: 74px;
+                            vertical-align: middle;
+                            border-color: transparent;
+                            .foto{
+                                border-radius: 20px 0 0 20px;
+                            }
+                            .beli{
+                                border-radius: 0 20px 20px 0;
+                            }
+                            .nama{
+                                color: #252525;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                            .tempat{
+                                color: #252525;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                            }
+                            .kelas{
+                                color: #252525;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 91.5%; /* 14.64px */
+                                text-transform: capitalize;
+                            }
+                            .harga{
+                                color: #252525;
+                                font-family: Poppins;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 91.5%; /* 18.3px */
+                                text-transform: capitalize;
+                            }
+                            td{
+                                .images{
+                                    border-radius: 50%;
+                                    width: 60px;
+                                    height: 60px;
+                                    background-color: #4d4d4d;
+                                    overflow: hidden;
+                                    img{
+                                        width: 60px;
+                                        height: 60px;
+                                        object-fit: cover;
+                                        object-position: center center;
+                                    }
+                                }
+                                .btn{
+                                    border-radius: 10px;
+                                    background: #FFC300;
+                                    padding: 15px 29px;
+                                    color: #252525;
+                                    text-align: center;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                        .tr1{
+                            &:hover{
+                                background-color: #F5F5F5 !important;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.agen-hero{
+    background-image: url(../assets/img/background/agen.png);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    .container{
+        height: 100%;
+        padding: 94px 0;
+        .header{
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            h1{
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 115.5%; /* 46.2px */
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+// datepicker
+.datepicker{
+    border: none !important;
+    background-color: transparent !important;
+    &:focus{
+        border: transparent !important;
+        outline-width: 0;
+    }
+}
+.datepicker-dropdown{
+    padding: 20px !important;
+    border-radius: 20px !important;
+    background-color: #fff !important;
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.07);
+}
+
+.agen_group{
+    background-color: #F5F5F5;
+    .container{
+        height: fit-content;
+        padding: 0 0 87px 0;
+    }
+    .card{
+        height: fit-content;
+        padding: 42px 20px;
+        border-radius: 50px;
+        background: #FFF;
+        box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.07);
+        border: none;
+        margin-top: -57px;
+        .card-body{
+            margin: 0;
+            padding: 0;
+            .header{
+                padding: 0 43px;
+                margin-bottom: 24px;
+                .material-symbols-outlined {
+                    font-size: 37px;
+                    font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 24
+                }
+                .btn{
+                    background-color: $secondary;
+                    margin: 0 8.5px;
+                    padding: 9px 20px;
+                    border: none;
+                    border-radius: 8px;
+                    color: #252525;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 91.5%; /* 14.64px */
+                    text-transform: capitalize;
+                    i{
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+                .dropdown{
+                    .dropdown-menu{
+                        border: none;
+                    }
+                    .show{
+                        overflow: visible !important;
+                        background-color: #00A0E9;
+                        border: none;
+                    }
+                }
+                .dropdown-toggle{
+                    &::after{
+                        color: $primary;
+                    }
+                }
+                .input-group{
+                    .btn{
+                        width: 73px;
+                        height: 42px;
+                        flex-shrink: 0;
+                        border-radius: 0px 8px 8px 0px;
+                        background: #FE0000;
+                        i{
+                            color: #FFF;
+                        }
+                    }
+                    input{
+                        &:focus{
+                            box-shadow: none;
+                            border: .5px solid $primary;
+                        }
+                        background: #F7F7F7;
+                    }
+                }
+            }
+            .count_agen{
+                border-radius: 30px;
+                background: #FFEAEA;
+                height: fit-content;
+                padding: 1px 24px 42px 24px;
+                .peragen{
+                    margin-top: 49px;
+                    .header{
+                        padding-left: 30px;
+                        margin-bottom: 12px;
+                        h4{
+                            color: #302F2F;
+                            font-family: Poppins;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 91.5%; /* 29.28px */
+                            text-transform: capitalize;
+                        }
+                    }
+                    .body{
+                        border-radius: 20px;
+                        background: #FFF;
+                        width: 100%;
+                        padding: 19px 27px;
+                        .col-body{
+                            border-radius: 15px;
+                            background-color: #F5F5F5;
+                            padding: 5px 26px 5px 11px;
+                            .images{
+                                width: 65.069px;
+                                height: 65px;
+                                flex-shrink: 0;
+                                border-radius: 50%;
+                                background-color: #686767;
+                                margin-right: 10px;
+                            }
+                            .info{
+                                margin-right: 27px;
+                                .nama{
+                                    span{
+                                        color: #252525;
+                                        font-family: Poppins;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 91.5%; /* 14.64px */
+                                        text-transform: capitalize;
+                                    }
+                                }
+                                .pos{
+                                    span{
+                                        color: #7C7C7C;
+                                        font-family: Poppins;
+                                        font-size: 12px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 120%; /* 14.4px */
+                                        text-transform: capitalize;
+                                    }
+                                }
+                            }
+                            .wabutton{
+                                .btn{
+                                    border: 2px solid $primary;
+                                    width: 50px;
+                                    height: 36px;
+                                    flex-shrink: 0;
+                                    i{
+                                        font-size: 24px;
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tanggal{
+                text-align: center;
+                span{
+                    color: #302F2F;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 91.5%; /* 14.64px */
+                    text-transform: capitalize;
+                }
+            }
+            .collapse{
+                .card_t{
+                    border-radius: 15px;
+                    background: #FBFBFB;
+                    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
+                    .card-body{
+                        position: relative;
+                        z-index: 21;
+                        border-radius: 15px;
+                        background: #FBFBFB;
+                        margin: 0 6px 6px 6px;
+                        height: 100%;
+                        .form{
+                            width: 100%;
+                            display: block;
+                            .form-group{
+                                label{
+                                    color: #303030;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                    margin-bottom: 6px;
+                                }
+                            }
+                            .input-group{
+                                margin: 0;
+                                padding: 0;
+                                width: 100%;
+                                span{
+                                    background-color: transparent;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translateY(-50%);
+                                        background-color: #a6a6a6;
+                                        width: 2px;
+                                        height: 20px;
+                                        border-radius: 10px;
+                                    }
+                                    &:focus{
+                                        box-shadow: none;
+                                        border: .5px solid $primary;
+                                        border-left: none;
+                                    }
+                                }
+                                input{
+                                    border-left: none;
+                                    border-top: 1px solid #d2d2d2;
+                                    box-shadow: none;
+
+                                    &:focus{
+                                        box-shadow: none;
+                                        border: .5px solid $primary;
+                                        // border-left: none;
+                                    }
+                                }
+                            }
+                            .btncari{
+                                // display: flex;
+                                // justify-content: center;
+                                // align-items: center;
+                                .btn{
+                                    background-color: $primary;
+                                    width: 100%;
+                                    color: #FFF;
+                                    text-align: center;
+                                    font-family: Poppins;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 91.5%; /* 14.64px */
+                                    text-transform: capitalize;
+                                    border-radius: 10px;
+                                    border: 2px solid $primary;
+                                    // transition: .5s ease-in-out;
+                                    span{
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+                                    h6{
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                                    &:hover{
+                                        background-color: #FFF;
+                                        border: 2px solid $primary;
+                                        cursor: pointer;
+                                        color: $primary;
+                                        // transition: background-color .5s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.blog-hero{
+    background-image: url(../assets/img/background/blog.png);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    .container{
+        height: 100%;
+        padding: 94px 0;
+        .header{
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            h1{
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 115.5%; /* 46.2px */
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.blog_group{
+    background-color: #fff;
+    margin-bottom: 223px;
+    .container{
+        height: fit-content;
+        padding: 0 0 87px 0;
+    }
+    .header{
+        padding: 12px 0;
+        h2{
+            margin-top: 91px;
+            color: #252525;
+            font-family: Poppins;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 38.4px */
+            text-transform: capitalize;
+        }
+    }
+    .card{
+        height: fit-content;
+        border: none;
+        .card-body{
+            margin: 0;
+            padding: 0;
+            .latest{
+                .images{
+                    height: 305px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    img{
+                        object-position: center;
+                        object-fit: cover;
+                        width: 100%;
+                        transition: .5s ease-in-out;
+                    }
+                    &:hover{
+                        img{
+                            transform: scale(1.2);
+                            transition: .5s ease-in-out;
+                        }
+                    }
+                }
+                .tanggal{
+                    text-align: start;
+                    margin: 20px auto;
+                    span{
+                        color: #7C7C7C;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                    }
+                }
+                .judul{
+                    h2{
+                        color: #212121;
+                        font-family: Poppins;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 28.8px */
+                        text-transform: capitalize;
+                    }
+                }
+                .deskripsi{
+                    p{
+                        color: #7C7C7C;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: #FE0000;
+                    span{
+                        margin: 11px auto;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                    }
+                    &:hover{
+                        color: #c00101;
+                    }
+                }
+            }
+            .someblog{
+                margin-top: 41px;
+                .card{
+                    // padding: 20px;
+                    margin: 0;
+                    transition: all .5s ease-in-out;
+                    cursor: pointer;
+                    &:hover{
+                        transition: all .5s ease-in-out;
+                        cursor: pointer;
+                        .card-body{
+                            .images{
+                                img{
+                                    transform: scale(1.2);
+                                    transition: .5s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                    .card-body{
+                        padding: 0;
+                        margin: 0;
+                        .images{
+                            height: 300px;
+                            border-radius: 20px;
+                            overflow: hidden;
+                            cursor: pointer;
+                            img{
+                                object-position: center;
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                transition: .5s ease-in-out;
+                            }
+                        }
+                        .tanggal{
+                            text-align: start;
+                            margin: 20px auto;
+                            span{
+                                color: #7C7C7C;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        .judul{
+                            h2{
+                                color: #212121;
+                                font-family: Poppins;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 28.8px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        .deskripsi{
+                            p{
+                                color: #7C7C7C;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        a{
+                            text-decoration: none;
+                            color: #FE0000;
+                            span{
+                                margin: 11px auto;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                            &:hover{
+                                color: #c00101;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blogdetail_group{
+    background-color: #fff;
+    padding-bottom: 223px;
+    .card{
+        position: relative;
+        z-index: 999;
+        border-radius: 30px;
+        background-color: #FFF !important;
+        margin-top: 134px;
+        height: fit-content;
+        background-color: transparent;
+        box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.07);
+        border: none;
+        .card-body{
+            padding: 45px 0 90px 0 !important;
+            margin: 0;
+            .judul{
+                h1{
+                    color: #212121;
+                    font-family: Poppins;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 43.2px */
+                    text-transform: capitalize;
+                }
+            }
+            .images{
+                height: 439px;
+                width: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                img{
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            .tanggal{
+                margin: 20px auto;
+                span{
+                    color: #8B8B8B;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%; /* 19.2px */
+                    text-transform: capitalize;
+                }
+            }
+            .deskripsi{
+                margin: 30px auto;
+                p{
+                    color: #212121;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%; /* 19.2px */
+                    text-transform: capitalize;
+                }
+            }
+            .medsos{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-top: 90px;
+                span{
+                    color: #212121;
+                    font-family: Poppins;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%; /* 28.8px */
+                    text-transform: capitalize;
+                    margin-right: 20px;
+                }
+                .fb, .ig, .twitter{
+                    margin-right: 10px;
+                    i{
+                        transition: .5s ease-in-out;
+                    }
+                    &:hover{
+                        i{
+                            transform: scale(1.1);
+                            transition: .5s ease-in-out;
+                        }
+                    }
+                }
+                .fb{
+                    i{
+                        color: #4267B2;
+                    }
+                }
+                .ig{
+                    i{
+                        color: #C13584;
+                    }
+                }
+                .twitter{
+                    i{
+                        color: #1DA1F2;
+                    }
+                }
+            }
+            .someblog{
+                margin-top: 41px;
+                .card{
+                    background-color: transparent !important;
+                    padding: 20px !important;
+                    margin: 0;
+                    transition: all .5s ease-in-out;
+                    cursor: pointer;
+                    box-shadow: none;
+                    &:hover{
+                        box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.07);
+                        transition: all .5s ease-in-out;
+                        border-radius: 20px;
+                        transform: scale(1.1);
+                    }
+                    .card-body{
+                        padding: 0 !important;
+                        margin: 0;
+                        .images{
+                            height: 300px;
+                            border-radius: 20px;
+                            overflow: hidden;
+                            cursor: pointer;
+                            img{
+                                object-position: center;
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                transition: .5s ease-in-out;
+                            }
+                            &:hover{
+                                img{
+                                    transform: scale(1.2);
+                                    transition: .5s ease-in-out;
+                                }
+                            }
+                        }
+                        .tanggal{
+                            text-align: start;
+                            margin: 20px auto;
+                            span{
+                                color: #7C7C7C;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        .judul{
+                            h2{
+                                color: #212121;
+                                font-family: Poppins;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 28.8px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        .deskripsi{
+                            p{
+                                color: #7C7C7C;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                        }
+                        a{
+                            text-decoration: none;
+                            color: #FE0000;
+                            span{
+                                margin: 11px auto;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                            }
+                            &:hover{
+                                color: #c00101;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .related{
+        background-color: #FFF;
+        box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.07);
+        margin-top: 25px;
+        padding: 17px 20px 70px 20px;
+        border-radius: 20px;
+        position: relative;
+        z-index: 999;
+        .header{
+            margin-top: 20px;
+            h2{
+                color: #212121;
+                font-family: Poppins;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%; /* 38.4px */
+                text-transform: capitalize;
+            }
+        }
+        .card{
+            background-color: transparent !important;
+            margin: 0;
+            margin-top: 32px;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            box-shadow: none;
+            &:hover{
+                transition: all .5s ease-in-out;
+                cursor: pointer;
+                .card-body{
+                    .images{
+                        img{
+                            transform: scale(1.2);
+                            transition: .5s ease-in-out;
+                        }
+                    }
+                }
+            }
+            .card-body{
+                padding: 0 !important;
+                margin: 0;
+                .images{
+                    height: 300px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    img{
+                        object-position: center;
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        transition: .5s ease-in-out;
+                    }
+                }
+                .tanggal{
+                    text-align: start;
+                    margin: 20px auto;
+                    span{
+                        color: #7C7C7C;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                    }
+                }
+                .judul{
+                    h2{
+                        color: #212121;
+                        font-family: Poppins;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 28.8px */
+                        text-transform: capitalize;
+                    }
+                }
+                .deskripsi{
+                    p{
+                        color: #7C7C7C;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: #FE0000;
+                    span{
+                        margin: 11px auto;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                    }
+                    &:hover{
+                        color: #c00101;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.hero-loker{
+    background-image: url(../assets/img/loker/hero.png);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .3);
+        z-index: 20;
+    }
+    .container{
+        height: 100%;
+        padding: 94px 0;
+        position: relative;
+        z-index: 21;
+        .header{
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            h1{
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 115.5%; /* 46.2px */
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.loker-body{
+    padding: 50px 0;
+    margin-bottom: 63px;
+    .card{
+        border: none;
+        filter: drop-shadow(0px 21px 42px rgba(0, 0, 0, 0.15));
+        background-color: #FFF;
+        border-radius: 20px;
+        margin: 0;
+        padding: 0;
+        .card-body{
+            padding: 20px;
+            margin: 0;
+            .images{
+                height: 260px;
+                overflow: hidden;
+                border-radius: 10px;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .nama_loker{
+                span{
+                    color: #212121;
+                    font-family: Poppins;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%; /* 28.8px */
+                    text-transform: capitalize;
+                }
+            }
+            .btnlamar{
+                position: absolute;
+                bottom: 48px;
+                right: 97px;
+                .btn{
+                    border-radius: 10px;
+                    background: #FE0000;
+                    padding: 12px 57px;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%; /* 19.2px */
+                    text-transform: capitalize;
+                    border: 2px solid $primary;
+
+                    &:hover{
+                        background-color: #FFF;
+                        border: 2px solid $primary;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .modal{
+        .modal-dialog{
+            border-radius: 30px;
+            .modal-content{
+                border-radius: 30px;
+                padding: 60px 28px;
+                .modal-header{
+                    border: none;
+                    h1{
+                        color: #252525;
+                        font-family: Poppins;
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 43.2px */
+                        text-transform: capitalize;
+                    }
+                }
+                .modal-body{
+                    padding: auto 28px;
+                    .form-group{
+                        .input-group{
+                            .dropdown-toggle::after {
+                                display: none;
+                            }
+                            .btn{
+                                height: 38px;
+                                padding: 10px 70px;
+                                margin: 0;
+                                color: #fff;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%; /* 19.2px */
+                                text-transform: capitalize;
+                                background-color: $primary;
+                                border: 2px solid $primary;
+                                border-radius: 0 10px 10px 0;
+                            }
+                            input{
+                                height: auto;
+                                border-radius: 10px 0 0 10px;
+                            }
+                        }
+                    }
+                    input, #cv{
+                        height: auto;
+                        border-radius: 10px;
+                    }
+                }
+                .modal-footer{
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .btn{
+                        height: fit-content !important;
+                        padding: 13px 20px;
+                    }
+                    #btl{
+                        color: #FE0000;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                        background-color: #FFF;
+                        border: 2px solid $primary;
+                        border-radius: 10px;
+                        &:hover{
+                            background-color: $primary;
+                            color: #FFF;
+                        }
+                    }
+                    #kirim{
+                        color: #fff;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%; /* 19.2px */
+                        text-transform: capitalize;
+                        background-color: $primary;
+                        border: 2px solid $primary;
+                        border-radius: 10px;
+                        &:hover{
+                            background-color: #FFF;
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-image: url(../assets/img/footer.jpeg);
+    background-size: 100% auto;
+    background-position: center;
+    padding: 50px 0 20px 0;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #373737, $alpha: .9);
+    }
+    .body-foot{
+        position: relative;
+        z-index: 20;
+        margin: 0;
+        width: 100%;
+        .brand{
+            img{
+                width: 311px;
+                height: 78px;
+            }
+        }
+        .info{
+            margin: 24px 0;
+            .alamat, .telepon, .email, .operasional{
+                span{
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%; /* 19.2px */
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .medsos{
+            a{
+                text-decoration: none;
+                margin-right: 10px;
+                i{
+                    color: #FFF;
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: space-between;
+            .row{
+                width: 100%;
+                .header{
+                    h4{
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 91.5%; /* 18.3px */
+                        text-transform: capitalize;
+                    }
+                }
+                .body{
+                    ul{
+                        padding: 0;
+                        margin: 18px 0;
+                        li{
+                            color: #FFF;
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%; /* 19.2px */
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        margin-top: 69px;
+        position: relative;
+        z-index: 20;
+        span{
+            color: #EFEFEF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 91.5%; /* 14.64px */
+            text-transform: capitalize;
+        }
+    }
+}

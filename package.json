@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "animate": "^1.0.0",
+    "animate.css": "^4.1.1",
+    "bootstrap-select": "^1.13.18",
+    "css": "^3.0.0",
+    "dropify": "^0.2.2",
+    "install": "^0.13.0",
+    "npm": "^10.2.3",
+    "summernote": "^0.8.20"
+  }
+}
