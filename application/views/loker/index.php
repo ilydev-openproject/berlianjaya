@@ -40,12 +40,12 @@ $this->load->view('layout/header');
                             <div class="row">
                                 <div class="col-5">
                                     <div class="images">
-                                        <img src="<?= base_url('/public/assets/img/loker/loker1.png') ?>" alt="">
+                                        <img src="<?= base_url('/public/assets/img/loker/loker2.png') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="col-7">
                                     <div class="nama_loker">
-                                        <span>Bergabung dengan Tim Agen Berlian Jaya: Kesempatan Karir Menarik Menanti!</span>
+                                        <span>Lowongan Pekerjaan Admin Berlian Jaya: Bergabunglah dengan Tim Kami!</span>
                                     </div>
                                 </div>
                             </div>
@@ -61,54 +61,12 @@ $this->load->view('layout/header');
                             <div class="row">
                                 <div class="col-5">
                                     <div class="images">
-                                        <img src="<?= base_url('/public/assets/img/loker/loker1.png') ?>" alt="">
+                                        <img src="<?= base_url('/public/assets/img/loker/loker3.png') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="col-7">
                                     <div class="nama_loker">
-                                        <span>Bergabung dengan Tim Agen Berlian Jaya: Kesempatan Karir Menarik Menanti!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="btnlamar">
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Lamar Sekarang</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10">
-                    <div class="card">
-                        <div class="card-body d-flex justify-content-center align-items-start">
-                            <div class="row">
-                                <div class="col-5">
-                                    <div class="images">
-                                        <img src="<?= base_url('/public/assets/img/loker/loker1.png') ?>" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <div class="nama_loker">
-                                        <span>Bergabung dengan Tim Agen Berlian Jaya: Kesempatan Karir Menarik Menanti!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="btnlamar">
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Lamar Sekarang</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10">
-                    <div class="card">
-                        <div class="card-body d-flex justify-content-center align-items-start">
-                            <div class="row">
-                                <div class="col-5">
-                                    <div class="images">
-                                        <img src="<?= base_url('/public/assets/img/loker/loker1.png') ?>" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <div class="nama_loker">
-                                        <span>Bergabung dengan Tim Agen Berlian Jaya: Kesempatan Karir Menarik Menanti!</span>
+                                        <span>Lowongan Driver Profesional: Jadilah Bagian dari Keluarga Berlian Jaya.</span>
                                     </div>
                                 </div>
                             </div>

@@ -9,6 +9,7 @@ class Rute extends CI_Controller
         parent::__construct();
         check_auth();
         $this->load->model('rute_model');
+        $this->load->model('kota_model');
     }
 
     public function index()
@@ -130,6 +131,27 @@ class Rute extends CI_Controller
             'id_daerah' => $post['id_daerah'],
         );
 
+        if (!empty($_FILES['foto_kota']['name'])) {
+
+            $config['file_name'] = 'kota-' . rand(0, 100) . rand(0, 100) . '-' . date('ymds');
+            $config['upload_path'] = './public/assets/img/kota/';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            // $config['max_size'] = 2048;
+
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('foto_kota')) {
+                $file = $this->upload->data();
+                $foto = $file['file_name'];
+                $data['foto_kota'] = $foto;
+                if (!empty($post['oldfoto']) && $post['oldfoto'] !== 'default.jpg') {
+                    // if (file_exists("./public/assets/img/kota/foto-kota/" . $post['oldfoto'])) {
+                    //     unlink("./public/assets/img/kota/foto-kota/" . $post['oldfoto']);
+                    // }
+                }
+            }
+        }
+
         $this->db->insert('kota', $data);
         $this->session->set_flashdata('s_success', "Kota berhasil disimpan");
 
@@ -150,6 +172,52 @@ class Rute extends CI_Controller
         } else {
             echo 'not_exists';
         }
+    }
+
+    public function edit_kota($id_kota)
+    {
+        $data['kota'] = $this->kota_model->get_kota_by_id($id_kota);
+        $data['daerah'] = $this->kota_model->get_daerah();
+        $this->load->view('admin/rute/kota_edit', $data);
+    }
+
+    public function edit_kota_process($id_kota)
+    {
+        $post = $this->input->post();
+        $data = [
+            'nama_kota' =>  $post['nama_kota'],
+            'id_daerah' =>  $post['id_daerah'],
+            'foto_kota' =>  $post['foto_kota'],
+        ];
+
+        if (!empty($_FILES['foto_kota']['name'])) {
+
+            $config['file_name'] = 'kota-' . rand(0, 100) . rand(0, 100) . '-' . date('ymds');
+            $config['upload_path'] = './public/assets/img/kota/';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            // $config['max_size'] = 2048;
+
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('foto_kota')) {
+                $file = $this->upload->data();
+                $foto = $file['file_name'];
+                $data['foto_kota'] = $foto;
+                if (!empty($post['oldfoto']) && $post['oldfoto'] !== 'default.jpg') {
+                    if (file_exists("./public/assets/img/kota/" . $post['oldfoto'])) {
+                        unlink("./public/assets/img/kota/" . $post['oldfoto']);
+                    }
+                }
+            }
+        }
+
+        // Memasukkan data agen
+        $this->db->where('kota.id_kota', $id_kota);
+        $this->db->update('kota', $data);
+
+        $this->session->set_flashdata('success', "Berhasil disimpan");
+
+        redirect('admin/rute/data_kota');
     }
 
 

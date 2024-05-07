@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -11,3 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	https://codeigniter.com/userguide3/general/hooks.html
 |
 */
+
+// application/config/hooks.php
+$hook['post_controller_constructor'][] = array(
+    'class'    => 'Visitor_hook',
+    'function' => 'record_visit',
+    'filename' => 'Visitor_hook.php',
+    'filepath' => 'hooks',
+);

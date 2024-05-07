@@ -14,31 +14,35 @@ $this->load->view('admin/layout/header');
                 </p>
             </div>
             <div class="card-body">
-                <table id="userTable" class="table table-striped dt-responsive nowrap w-100">
+
+                <table id="testiTable" class="table table-striped dt-responsive nowrap w-100">
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Nama Kota</th>
-                            <th>Nama Daerah</th>
-                            <th width="10%">Action</th>
+                            <th>Foto</th>
+                            <th>Nama Customer</th>
+                            <th width="30%">Deskripsi</th>
+                            <th>Rating</th>
+                            <th width="20%">Action</th>
                         </tr>
                     </thead>
-
 
                     <tbody>
                         <?php
                         $i = 1;
-                        foreach ($kota as $data) :
+                        foreach ($testi as $data) :
                         ?>
                             <tr>
                                 <td><?= $i++ ?></td>
-                                <td><?= $data['nama_kota'] ?></td>
-                                <td><?= $data['nama_daerah'] ?></td>
+                                <td><img src="<?= site_url('public/assets/img/testi/' . $data['foto_testi']) ?>" alt="" style="width: 80px;"></td>
+                                <td><?= $data['nama_testi'] ?></td>
+                                <td><?= $data['desc_testi'] ?></td>
+                                <td><?= $data['rating'] ?></td>
                                 <td>
-                                    <a href="<?= site_url('admin/rute/edit_kota/' . $data['id_kota']) ?>" type="button" class="btn btn-primary mx-1"><i class="mdi mdi-account-edit"></i>Edit</a>
-                                    <a href="#fill-danger-modal_<?= $data['id_kota'] ?>" type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#fill-danger-modal_<?= $data['id_kota'] ?>"><i class="mdi mdi-trash-can-outline"></i>Hapus</a>
+                                    <a href="<?= site_url('admin/testimoni/edit_testi/' . $data['id_testimoni']) ?>" type="button" class="btn btn-primary mx-1"><i class="mdi mdi-account-edit"></i>Edit</a>
+                                    <a href="#fill-danger-modal_<?= $data['id_testimoni'] ?>" type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#fill-danger-modal_<?= $data['id_testimoni'] ?>"><i class="mdi mdi-trash-can-outline"></i>Hapus</a>
                                 </td>
-                                <div id="fill-danger-modal_<?= $data['id_kota'] ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="fill-danger-modalLabel" aria-hidden="true">
+                                <div id="fill-danger-modal_<?= $data['id_testimoni'] ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="fill-danger-modalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content modal-filled bg-danger">
                                             <div class="modal-header">
@@ -46,15 +50,15 @@ $this->load->view('admin/layout/header');
                                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Apakah anda yakin ingin menghapus data kota dengan data</p>
-                                                <p>Data ini mempunyai data Nama kota "<?= $data['nama_kota'] ?>"?</p>
+                                                <p>Apakah anda yakin ingin menghapus data testi dengan data</p>
+                                                <p>Data ini mempunyai data Nama testi "<?= $data['nama_testi'] ?>"?</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                <a href="<?= site_url('admin/rute/del_kota/' . $data['id_kota']) ?>" type="button" class="btn btn-outline-light">Hapus Sekarang</a>
+                                                <a href="<?= site_url('admin/testimoni/del_testi/' . $data['id_testimoni']) ?>" type="button" class="btn btn-outline-light">Hapus Sekarang</a>
                                             </div>
-                                        </div><!-- /.modal-content -->
-                                    </div><!-- /.modal-dialog -->
+                                        </div>
+                                    </div>
                                 </div>
                             </tr>
 

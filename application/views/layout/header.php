@@ -1,5 +1,16 @@
 <!doctype html>
 <html lang="en">
+<?php
+// Code to load CodeIgniter environment
+// require_once('/index.php');
+
+// Panggil model
+$CI = &get_instance();
+$CI->load->model('Visitor_model');
+
+// Panggil fungsi untuk menambahkan pengunjung
+$CI->Visitor_model->add_visitor();
+?>
 
 <head>
     <title>Berlian | Home</title>

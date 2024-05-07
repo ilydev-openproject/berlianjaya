@@ -18,12 +18,19 @@ $this->load->view('admin/layout/header');
                         <span id="nama_kota_error" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-3">
-                        <select class="form-control select2" name="id_daerah" data-toggle="select2" data-placeholder="Pilih daerah" required>
+                        <select class="form-control select2" name="id_daerah" id="daerah" data-toggle="select2" data-placeholder="Pilih daerah" required>
                             <option value="">Pilih Daerah</option>
                             <?php foreach ($daerah as $daerah) : ?>
                                 <option value="<?= $daerah['id_daerah'] ?>"><?= ucwords($daerah['nama_daerah']) ?></option>
                             <?php endforeach ?>
                         </select>
+                        <span id="id_daerah_error" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="foto">Upload Foto</label>
+                        <input type="file" name="foto_kota" id="dropify1" class="dropify" data-height="100" required />
+                        <input type="hidden" name="oldfoto" value="">
+                        <span id="foto_error" class="text-danger"></span>
                     </div>
                     <button type="button" class="btn btn-info" onclick="validateForm()"><i class="mdi mdi-account-multiple-plus me-2"></i>Simpan</button>
                 </form>
@@ -31,6 +38,23 @@ $this->load->view('admin/layout/header');
                 <script>
                     function validateForm() {
                         var nama_kota = document.getElementById('nama_kota').value;
+                        var id_daerah = document.getElementById('daerah').value;
+                        var foto_user = document.getElementById('dropify1').files[0];
+
+                        if (nama_kota.trim() === '') {
+                            document.getElementById('nama_kota_error').innerHTML = 'Nama kota harus diisi';
+                            return; // Hentikan validasi jika input kosong
+                        }
+                        if (id_daerah.trim() === '') {
+                            document.getElementById('id_daerah_error').innerHTML = 'Daerah harus dipilih';
+                            return; // Hentikan validasi jika input kosong
+                        }
+                        if (!foto_user) {
+                            document.getElementById('foto_error').innerHTML = 'Foto harus diupload';
+                            return; // Hentikan validasi jika input kosong
+                        }
+
+                        // Lakukan AJAX untuk memeriksa nama kota di database
                         $.ajax({
                             url: '<?= site_url('admin/rute/check_nama_kota') ?>',
                             type: 'POST',
@@ -41,8 +65,7 @@ $this->load->view('admin/layout/header');
                                 if (response === 'exists') {
                                     document.getElementById('nama_kota_error').innerHTML = 'Nama kota sudah ada';
                                 } else {
-                                    document.getElementById('nama_kota_error').innerHTML = '';
-                                    // Jika valid, submit form
+                                    // Jika tidak ada pesan kesalahan, submit form
                                     document.getElementById('addKotaForm').submit();
                                 }
                             }

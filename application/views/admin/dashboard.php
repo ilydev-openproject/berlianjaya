@@ -7,7 +7,13 @@ $this->load->view('admin/layout/header');
 <!-- ============================================================== -->
 
 
-
+<div class="card">
+    <div class="card-body">
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div> <!-- end card-body-->
+</div> <!-- end card-->
 
 <div class="row">
     <div class="col-xxl-3 col-sm-6">
@@ -85,7 +91,6 @@ $this->load->view('admin/layout/header');
                     <a href="#" data-bs-toggle="remove"><i class="ri-close-line"></i></a>
                 </div>
                 <h5 class="header-title mb-0">Weekly Sales Report</h5>
-
                 <div id="weeklysales-collapse" class="collapse pt-3 show">
                     <div dir="ltr">
                         <div id="revenue-chart" class="apex-charts" data-colors="#3bc0c3,#1a2942,#d1d7d973"></div>
@@ -130,7 +135,7 @@ $this->load->view('admin/layout/header');
                     <a data-bs-toggle="collapse" href="#yearly-sales-collapse" role="button" aria-expanded="false" aria-controls="yearly-sales-collapse"><i class="ri-subtract-line"></i></a>
                     <a href="#" data-bs-toggle="remove"><i class="ri-close-line"></i></a>
                 </div>
-                <h5 class="header-title mb-0">Yearly Sales Report</h5>
+                <h5 class="header-title mb-0">Yearlys Sales Report</h5>
 
                 <div id="yearly-sales-collapse" class="collapse pt-3 show">
                     <div dir="ltr">

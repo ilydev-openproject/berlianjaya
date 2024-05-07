@@ -154,9 +154,26 @@
                 </div>
             </li>
 
-
-
+            <!-- rute bus -->
             <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#testi" aria-expanded="false" aria-controls="rute" class="side-nav-link">
+                    <i class="mdi mdi-chat-processing-outline"></i>
+                    <span> Testimoni </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="testi">
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="<?= site_url('admin/testimoni') ?>">Data Testimoni</a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('admin/testimoni/add') ?>">Tambah Testimoni</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> Pages </span>
@@ -256,11 +273,11 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
             <li class="side-nav-title">Components</li>
 
-            <li class="side-nav-item">
+            <!-- <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" class="side-nav-link">
                     <i class="ri-briefcase-line"></i>
                     <span> Base UI </span>
@@ -551,7 +568,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
 
         </ul>

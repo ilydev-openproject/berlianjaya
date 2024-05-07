@@ -544,5 +544,5 @@ $config['proxy_ips'] = '';
 $config['cache_expiration'] = 0;
 
 $config['image_library'] = 'gd2';
-$config['./public/img/blog/'] = ''; // Sesuaikan dengan path gambar sumber
-$config['./public/img/blog/'] = ''; // Sesuaikan dengan path gambar hasil konversi
+$config['./public/img/blog/'] = '';
+$config['./public/img/blog/'] = '';

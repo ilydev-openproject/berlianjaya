@@ -32,7 +32,7 @@
                     </div>
                     <div class="info">
                         <div class="alamat">
-                            <span>Alamat Kantor : Jl. lingkar Utara, Peganjaran, Bae, Kudus (59327).</span>
+                            <a style="text-decoration: none;" href="https://maps.app.goo.gl/nXKkksjxF78Hsb279"><span>Alamat Kantor : Jl. lingkar Utara, Peganjaran, Bae, Kudus (59327).</span></a>
                         </div>
                         <div class="telepon">
                             <span>Telepon : 081226969379</span>

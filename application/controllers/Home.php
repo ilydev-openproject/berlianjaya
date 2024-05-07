@@ -9,12 +9,13 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->model('tiket_model');
         $this->load->model('agen_model');
+        $this->load->model('testi_model');
     }
 
     public function index()
     {
         $data['kota'] = $this->tiket_model->get_kota();
-        // $data['daerah'] = $this->tiket_model->get_daerah();
+        $data['testi'] = $this->testi_model->get_testi();
         $this->load->view('index.php', $data);
     }
 

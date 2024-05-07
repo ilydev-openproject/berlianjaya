@@ -8,10 +8,13 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         check_auth();
+        $this->load->model('Visitor_model');
     }
     public function index()
     {
-        $this->load->view('admin/dashboard');
+        $data['visitor_data'] = $this->Visitor_model->get_visitor_data();
+        $data['chart_data'] = $this->Visitor_model->get_data_by_hour();
+        $this->load->view('admin/dashboard', $data);
     }
 }
         
